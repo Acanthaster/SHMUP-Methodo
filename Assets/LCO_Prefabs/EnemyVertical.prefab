@@ -185,4 +185,7 @@ MonoBehaviour:
   health: 1
   invulnPeriode: 0
   animator: {fileID: 1203436423623111814}
-  dead: 0
+  valueScore: 0
+  nmiVertiValue: 10
+  nmiStaticValue: 0
+  nmiCircleValue: 0

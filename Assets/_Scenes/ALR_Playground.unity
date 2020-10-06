@@ -494,6 +494,10 @@ PrefabInstance:
       propertyPath: ALR_DamageHandler
       value: 
       objectReference: {fileID: 1854041967}
+    - target: {fileID: 8864109545532122691, guid: 1eea68192438fdd42b899320387ef389, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1993326959}
     - target: {fileID: 8864109545532122695, guid: 1eea68192438fdd42b899320387ef389, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1114,6 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e315b2360715f3a40aa64637480ae3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalScore: 0
   nmiVertiValue: 10
   nmiStaticValue: 100
   nmiCircleValue: 1000

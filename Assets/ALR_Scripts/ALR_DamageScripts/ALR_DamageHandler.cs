@@ -8,7 +8,7 @@ public class ALR_DamageHandler : MonoBehaviour
     protected float invulnTimer;
     public float invulnPeriode;
     int correctLayer;
-
+    private bool dead = false;
 
     public Animator animator;
 
@@ -36,8 +36,9 @@ public class ALR_DamageHandler : MonoBehaviour
 
         }
 
-        if (health <= 0)
+        if (health <= 0 && dead == false)
         {
+            dead = true;
             //Debug.Log("JE SUIS EN VIE " + health);
             Dying();
         }

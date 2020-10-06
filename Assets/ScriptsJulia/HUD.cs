@@ -11,11 +11,12 @@ public class HUD : MonoBehaviour
     public UnityEngine.UI.Text displayScore;
     static public int score;
     public ALR_DamagePlayer ALR_DamageHandler;
+    public ALR_ScoreManager scoreManager;
 
     // Update is called once per frame
     void Update()
     {
-        displayScore.text = "Score :" + score.ToString();
+        displayScore.text = "Score :" + scoreManager.totalScore.ToString();
       
         if (ALR_DamageHandler.health > 99)
         {
