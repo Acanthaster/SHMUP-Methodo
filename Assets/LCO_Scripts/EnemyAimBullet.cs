@@ -15,7 +15,13 @@ public class EnemyAimBullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindObjectOfType<ALR_PlayerController>();
-        moveDirection = (target.transform.position - transform.position).normalized * Speed;
+
+        if(target.transform.position != null)
+        {
+
+            moveDirection = (target.transform.position - transform.position).normalized * Speed;
+
+        }
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
         Destroy(gameObject, 3f);
     }
@@ -29,7 +35,7 @@ public class EnemyAimBullet : MonoBehaviour
     {
         if (col.gameObject.name.Equals("Player"))
         {
-            Debug.Log("Hit!");
+            //Debug.Log("Hit!");
             Destroy(gameObject);
         }
     }

@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using UnityEditor.Timeline;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ALR_PlayerController : MonoBehaviour
 {
@@ -24,12 +25,18 @@ public class ALR_PlayerController : MonoBehaviour
 
     public GameObject bulletPrefab;
 
+    //COMPONENTS FOR DAMAGE
+    private ALR_DamageHandler die;
+    private float delayScene = 5f;
+
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        die = GetComponent<ALR_DamageHandler>();
+
 
     }
 
@@ -54,6 +61,11 @@ public class ALR_PlayerController : MonoBehaviour
 
         }
 
+
+
+
+
+
     }
 
     void FixedUpdate()
@@ -63,17 +75,36 @@ public class ALR_PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
 
         //animator.Play("Bat_Anim_Move");
-           
-        
 
 
-        //SHOOT
-       
+       if(die.dead == true)
+        {
+
+            Debug.Log("BIM ! I AM DEAD !");
+            StartCoroutine("Dying");
+
+        }
+
+
+
 
     }
 
+  
 
 
+    IEnumerator Dying()
+    {
+        Debug.Log("NOW WHAT ?");
+
+        yield return new WaitForSeconds(5);
+
+        Debug.Log("LET'S MOVE ON !");
+
+        //SceneManager.LoadScene("GameOver");
+
+
+    }
 
 
 

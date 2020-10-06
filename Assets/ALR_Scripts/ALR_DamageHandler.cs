@@ -9,6 +9,7 @@ public class ALR_DamageHandler : MonoBehaviour
     float invulnTimer;
     public float invulnPeriode;
     int correctLayer;
+    public bool dead;
 
     public Animator animator;
 
@@ -18,6 +19,7 @@ public class ALR_DamageHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dead = false;
         correctLayer = gameObject.layer;
 
         animator = GetComponent<Animator>();
@@ -47,7 +49,7 @@ public class ALR_DamageHandler : MonoBehaviour
        
 
             health--;
-            Debug.Log("OUTCH" + health);
+            //Debug.Log("OUTCH" + health);
 
             invulnTimer = invulnPeriode;
             gameObject.layer = 11;
@@ -57,8 +59,9 @@ public class ALR_DamageHandler : MonoBehaviour
 
 
 
-    void Die()
+    public void Die()
     {
+        dead = true;
         animator.SetTrigger("Death");
         Destroy(gameObject, 0.5f);
         

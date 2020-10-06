@@ -44,6 +44,7 @@ public class EnemyVertical : MonoBehaviour
     {
         Instantiate(bullet, spawnBullet, Quaternion.identity);
         yield return new WaitForSeconds(fireRate);
+        //Debug.Log("PIOU !");
         StartCoroutine("Shoot");
     }
     IEnumerator Up()

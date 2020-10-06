@@ -16,6 +16,7 @@ public class HUD : MonoBehaviour
     void Update()
     {
         displayScore.text = "Score :" + score.ToString();
+      
         if (ALR_DamageHandler.health > 99)
         {
             displayLife.text = "99+";
