@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5430188062894465431}
   - component: {fileID: 5430188062894465432}
   - component: {fileID: 471330414567059996}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Poison_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,12 +131,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5430188062894465426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7add1ebf955f1524b939e5817e9433fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  playerHealth: 1
   invulnPeriode: 0
   animator: {fileID: 471330414567059996}
 --- !u!114 &5430188062894465432

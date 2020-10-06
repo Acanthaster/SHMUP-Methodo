@@ -10,7 +10,7 @@ public class HUD : MonoBehaviour
     public UnityEngine.UI.Text displayLife;
     public UnityEngine.UI.Text displayScore;
     static public int score;
-    public ALR_DamageHandler ALR_DamageHandler;
+    public ALR_DamagePlayer ALR_DamageHandler;
 
     // Update is called once per frame
     void Update()

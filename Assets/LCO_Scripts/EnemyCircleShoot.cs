@@ -28,4 +28,13 @@ public class EnemyCircleShoot : MonoBehaviour
         yield return new WaitForSeconds(fireRate);
         StartCoroutine("Shoot");
     }
+
+
+
+
+
+
+
+
+
 }

@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ALR_DamageHandler : MonoBehaviour
+public class ALR_DamageHandlerPlayer : MonoBehaviour
 {
 
-    public int health = 1;
+    public int playerHealth = 1;
     float invulnTimer;
     public float invulnPeriode;
     int correctLayer;
-    public bool dead;
+
 
     public Animator animator;
 
@@ -19,7 +20,7 @@ public class ALR_DamageHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dead = false;
+
         correctLayer = gameObject.layer;
 
         animator = GetComponent<Animator>();
@@ -36,9 +37,10 @@ public class ALR_DamageHandler : MonoBehaviour
 
         }
 
-        if (health <= 0)
+        if (playerHealth <= 0)
         {
-            Die();
+            Debug.Log("JE SUIS EN VIE " + playerHealth);
+            Dying();
         }
 
 
@@ -46,9 +48,9 @@ public class ALR_DamageHandler : MonoBehaviour
 
     void OnTriggerEnter2D()
     {
-       
 
-            health--;
+
+            playerHealth--;
             //Debug.Log("OUTCH" + health);
 
             invulnTimer = invulnPeriode;
@@ -58,13 +60,27 @@ public class ALR_DamageHandler : MonoBehaviour
     }
 
 
-
-    public void Die()
+    private void Dying()
     {
-        dead = true;
+        Debug.Log("PLAYER IS DEAD !");
+        StartCoroutine("Die");
+
+    }
+
+
+
+    IEnumerator Die()
+    {
+
         animator.SetTrigger("Death");
-        Destroy(gameObject, 0.5f);
-        
+        //Destroy(gameObject, 0.5f);
+       
+        yield return new WaitForSeconds(2);
+
+        Debug.Log("LET'S MOVE ON !");
+        Debug.Log("MY PV " + playerHealth);
+
+        SceneManager.LoadScene("GameOver");
 
     }
 

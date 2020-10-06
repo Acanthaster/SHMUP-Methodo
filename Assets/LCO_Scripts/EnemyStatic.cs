@@ -10,6 +10,10 @@ public class EnemyStatic : MonoBehaviour
     public float fireRate;
     Vector2 spawnBullet;
 
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {

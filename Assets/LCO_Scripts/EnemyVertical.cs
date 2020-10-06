@@ -16,6 +16,7 @@ public class EnemyVertical : MonoBehaviour
     public bool up;
     public bool down;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,8 @@ public class EnemyVertical : MonoBehaviour
         up = false;
         down = false;
         StartCoroutine("Shoot");
-        StartCoroutine("Down");        
+        StartCoroutine("Down");
+
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class EnemyVertical : MonoBehaviour
         {
             rb.velocity = Vector2.down*speed;
         }
+
     }
 
     IEnumerator Shoot()
@@ -61,4 +64,8 @@ public class EnemyVertical : MonoBehaviour
         yield return new WaitForSeconds(2);
         StartCoroutine("Up");
     }
+
+
+
+
 }
