@@ -92,12 +92,12 @@ public class ALR_ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("n"))
+        /*if(Input.GetKeyDown("n"))
         {
 
             UpdateHighScore(totalScore);
             SceneManager.LoadScene("Scene_EnterName");
-        }
+        }*/
 
     }
 
@@ -210,6 +210,16 @@ public class ALR_ScoreManager : MonoBehaviour
 
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+
+            UpdateHighScore(totalScore);
+            SceneManager.LoadScene("Scene_EnterName");
+
+        }
+    }
 
 
 

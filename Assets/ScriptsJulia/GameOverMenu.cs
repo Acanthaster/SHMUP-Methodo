@@ -22,6 +22,6 @@ public class GameOverMenu : MonoBehaviour
 
     public void Next()
     {
-        SceneManager.LoadScene("Menu_High Score");
+        SceneManager.LoadScene("Menu_HighScore");
     }
 }
