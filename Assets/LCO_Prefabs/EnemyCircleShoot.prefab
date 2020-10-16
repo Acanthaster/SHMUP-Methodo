@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7250416298736224056}
   - component: {fileID: 7250416298736224007}
   - component: {fileID: 5173115493280011133}
+  - component: {fileID: 2002590668616408052}
   - component: {fileID: 2920198159638301900}
   m_Layer: 0
   m_Name: EnemyCircleShoot
@@ -147,6 +148,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 691318604591579497, guid: f04a88fa9fd5dff4fa7fa478cbf2852f, type: 3}
   fireRate: 1
+--- !u!114 &2002590668616408052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7250416298736224006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc73e2e3d1dffb4459cd5d2dfa627733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  invulnPeriode: 0
+  animator: {fileID: 0}
 --- !u!95 &2920198159638301900
 Animator:
   serializedVersion: 3

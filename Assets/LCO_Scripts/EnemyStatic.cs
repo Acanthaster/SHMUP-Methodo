@@ -11,9 +11,6 @@ public class EnemyStatic : MonoBehaviour
     Vector2 spawnBullet;
 
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +26,7 @@ public class EnemyStatic : MonoBehaviour
     IEnumerator Shoot()
     {
         Instantiate(bullet, spawnBullet, Quaternion.identity);
-        yield return new WaitForSeconds(fireRate);
+        yield return new WaitForSeconds(fireRate);        
         StartCoroutine("Shoot");
     }
 }

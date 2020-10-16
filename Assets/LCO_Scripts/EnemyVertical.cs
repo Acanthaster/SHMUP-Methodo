@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class EnemyVertical : MonoBehaviour
@@ -39,7 +40,7 @@ public class EnemyVertical : MonoBehaviour
         if (down == true)
         {
             rb.velocity = Vector2.down*speed;
-        }
+        }    
 
     }
 
@@ -47,7 +48,6 @@ public class EnemyVertical : MonoBehaviour
     {
         Instantiate(bullet, spawnBullet, Quaternion.identity);
         yield return new WaitForSeconds(fireRate);
-        //Debug.Log("PIOU !");
         StartCoroutine("Shoot");
     }
     IEnumerator Up()
