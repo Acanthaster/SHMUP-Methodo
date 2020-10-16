@@ -42,7 +42,7 @@ public class ALR_MenuEnterName : MonoBehaviour
         newName = GUI.TextField(new Rect((Screen.width/2) - 50, (Screen.height/2) - 25, 100, 30), newName, 5);
     }
 
-    void UpdateName(int rang)
+    public void UpdateName(int rang)
     {
         Debug.Log("RANK : " + rang);
         switch (rang)
