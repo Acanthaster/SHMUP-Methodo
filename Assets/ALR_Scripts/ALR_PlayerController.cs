@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Threading;
-using UnityEditor.Timeline;
 using UnityEngine;
 
 public class ALR_PlayerController : MonoBehaviour

@@ -92,12 +92,18 @@ public class ALR_ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("n"))
+       /*if(Input.GetKeyDown("n"))
         {
 
             UpdateHighScore(totalScore);
             SceneManager.LoadScene("Scene_EnterName");
         }
+
+        if(Input.GetKeyDown("m"))
+        {
+            ClearHighScore();
+
+        }*/
 
     }
 
@@ -204,10 +210,7 @@ public class ALR_ScoreManager : MonoBehaviour
 
                 break;
             }
-            else if (score < arrHighScore[i])
-            {
-                SceneManager.LoadScene("Scene_NoHighScore");
-            }
+
         }
     }
 
@@ -225,6 +228,11 @@ public class ALR_ScoreManager : MonoBehaviour
         }
     }
 
+
+    public static void ClearHighScore()
+    {
+        PlayerPrefs.DeleteKey("HighScore");
+    }
 
 
 }
