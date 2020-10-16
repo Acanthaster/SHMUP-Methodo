@@ -11,7 +11,7 @@ public class EnemyCircleShoot : MonoBehaviour
     Vector2 spawnBullet;
 
     // Start is called before the first frame update
-    void Start()
+        void Start()
     {
         StartCoroutine("Shoot");
     }

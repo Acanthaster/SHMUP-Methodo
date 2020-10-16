@@ -204,17 +204,17 @@ public class ALR_ScoreManager : MonoBehaviour
 
                 break;
             }
-            /*else if (score < arrHighScore[i])
+            else if (score < arrHighScore[i])
             {
                 SceneManager.LoadScene("Scene_NoHighScore");
-            }*/
+            }
         }
     }
 
 
 
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
@@ -223,7 +223,7 @@ public class ALR_ScoreManager : MonoBehaviour
             SceneManager.LoadScene("Scene_EnterName");
 
         }
-    }*/
+    }
 
 
 

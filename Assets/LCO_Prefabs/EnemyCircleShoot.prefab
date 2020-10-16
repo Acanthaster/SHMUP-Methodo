@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 7250416298736224057}
   - component: {fileID: 7250416298736224056}
   - component: {fileID: 7250416298736224007}
+  - component: {fileID: 1585557604759865633}
   - component: {fileID: 5173115493280011133}
   - component: {fileID: 2002590668616408052}
   - component: {fileID: 2920198159638301900}
   m_Layer: 0
   m_Name: EnemyCircleShoot
-  m_TagString: Untagged
+  m_TagString: EnemyCircleShoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &5173115493280011133
+--- !u!114 &1585557604759865633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,6 +143,18 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7250416298736224006}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7fff1cea6a858b4291a5917852d2148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5173115493280011133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7250416298736224006}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 072f5cc4308b57a46a10e21236780e5d, type: 3}
   m_Name: 
@@ -163,6 +176,7 @@ MonoBehaviour:
   health: 1
   invulnPeriode: 0
   animator: {fileID: 0}
+  enemyHealth: 1
 --- !u!95 &2920198159638301900
 Animator:
   serializedVersion: 3
