@@ -12,17 +12,17 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Cancel"))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("ohohoh");
             if (gameIsPaused)
             {
-                Debug.Log("appuie");
+                //Debug.Log("appuie");
                 Resume();
             }
             else
             {
-                Debug.Log("poney echappe");
+                //Debug.Log("poney echappe");
                 Pause();
             }
         }
@@ -30,14 +30,14 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        pauseMenuUI.GetComponent<RectTransform>().localScale = Vector3.zero;
         Time.timeScale = 1f;
         gameIsPaused = false;
     }
 
     public void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        pauseMenuUI.GetComponent<RectTransform>().localScale = Vector3.one;
         Time.timeScale = 0f;
         gameIsPaused = true;
     }

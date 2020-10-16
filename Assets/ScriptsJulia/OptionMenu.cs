@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class OptionMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioMixer audioMixer;
+    public void SetVolume(float volume)
     {
-        
+        audioMixer.SetFloat("volume", volume);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Credits()
     {
-        
+        SceneManager.LoadScene("Credits");
     }
 }
