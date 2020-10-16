@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/GameOver.unity
     guid: 9ddad719aee96d0429cf42b3040fb30b
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/ALR_Playground.unity
     guid: a78fc3baf70985b4b8239c127bfc8832
   - enabled: 1

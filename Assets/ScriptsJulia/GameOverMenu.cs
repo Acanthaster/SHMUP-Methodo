@@ -7,7 +7,7 @@ public class GameOverMenu : MonoBehaviour
 {
     public void Replay()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level2");
     }
 
     public void Menu()
