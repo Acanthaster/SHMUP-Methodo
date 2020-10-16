@@ -92,12 +92,12 @@ public class ALR_ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(Input.GetKeyDown("n"))
+        if(Input.GetKeyDown("n"))
         {
 
             UpdateHighScore(totalScore);
             SceneManager.LoadScene("Scene_EnterName");
-        }*/
+        }
 
     }
 
@@ -204,13 +204,17 @@ public class ALR_ScoreManager : MonoBehaviour
 
                 break;
             }
+            /*else if (score < arrHighScore[i])
+            {
+                SceneManager.LoadScene("Scene_NoHighScore");
+            }*/
         }
     }
 
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
@@ -219,7 +223,7 @@ public class ALR_ScoreManager : MonoBehaviour
             SceneManager.LoadScene("Scene_EnterName");
 
         }
-    }
+    }*/
 
 
 

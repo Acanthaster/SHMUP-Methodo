@@ -9,6 +9,9 @@ public class ALR_DamageEnemies : ALR_DamageHandler
 
     private ALR_ScoreManager scoreManager;
 
+    public int enemyHealth = 1;
+    private bool enemyDead = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +22,24 @@ public class ALR_DamageEnemies : ALR_DamageHandler
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (enemyHealth <= 0 && enemyDead ==false)
+        {
+            enemyDead = true;
+            Dying();
+        }
     }
+
+    protected void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.CompareTag("Player"))
+        {
+            enemyHealth--;
+        }
+
+    }
+
 
 
     protected override void Dying()

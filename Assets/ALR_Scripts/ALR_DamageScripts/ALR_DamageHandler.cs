@@ -47,11 +47,6 @@ public class ALR_DamageHandler : MonoBehaviour
     }
 
 
-    protected virtual void OnTriggerEnter2D()
-    {
-        health--;
-    }
-
 
 
     protected virtual void Dying()

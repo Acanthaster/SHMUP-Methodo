@@ -17,11 +17,10 @@ public class ALR_DamagePlayer : ALR_DamageHandler
         
     }
 
-    protected override void OnTriggerEnter2D()
+    protected void OnTriggerEnter2D()
    {
 
-        base.OnTriggerEnter2D();
-
+       health--;
        invulnTimer = invulnPeriode;
        gameObject.layer = 11;
 
